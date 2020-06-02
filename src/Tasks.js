@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const Tasks = ({ tasks, filter, dispatch }) => {
   console.log(tasks);
-  return filter == "SHOW_DONE"
+  return filter === "SHOW_DONE"
     ? tasks
         .filter((item) => item.done)
         .map((item) => (
@@ -22,7 +22,7 @@ const Tasks = ({ tasks, filter, dispatch }) => {
             {item.title}
           </label>
         ))
-    : filter == "SHOW_TODO"
+    : filter === "SHOW_TODO"
     ? tasks
         .filter((item) => !item.done)
         .map((item) => (

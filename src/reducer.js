@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
         action.done;
       return {
         ...state,
-        tasks: localTasks,
+        tasks: [...localTasks],
       };
     default:
       return state;
